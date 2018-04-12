@@ -2,7 +2,7 @@
 // @name                Wandoujia Download APK Directly
 // @name:zh-CN          豌豆荚直接下载APK
 // @namespace           @null
-// @version             0.1
+// @version             0.2
 // @description         All install links are replaced with direct download APK links
 // @description:zh-CN   页面内所有安装按钮链接修改为直接下载APK链接
 // @author              test01wrk
@@ -33,10 +33,8 @@
         //console.log('direct.url=' + url);
         if (success) {
             e.setAttribute('href', url);
-            if (e.innerHTML.trim().length > 3) {
+            if (e.innerHTML.trim().length >= 4) {
                 e.innerHTML = '下载APK';
-            } else {
-                e.innerHTML = '下载';
             }
         }
     });
